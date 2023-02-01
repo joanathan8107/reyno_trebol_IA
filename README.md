@@ -134,12 +134,17 @@ Archivo de prueba de endpoints.
 
 1. Descargar Código.
 
-2. Ejecutar pip -r requirements.txt para instalar las librerias necesarias del proyecto.
+2. Ejecutar:
+
+pip -r requirements.txt 
+
+Instala las librerias necesarias del proyecto.
 
 3. Modificar el archivo database.py con los datos de conexión a la base de datos a trabajar:
-    database='reynoTrebolIA', 
-    user='root', password='password',
-    host='localhost', port=3306
+
+database='reynoTrebolIA', 
+user='root', password='password',
+host='localhost', port=3306
 
 4. Ejecutar desde linea de comandos:
 
