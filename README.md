@@ -152,6 +152,6 @@ uvicorn main:app
 
 Este comando ejecutara el servidor uvicorn en el cual se estara levantando el servicio.
 
-5. Para probar los endpoints, en el equipo en donde se esta ejecutando el servidor uvicorn, desde el navegador consultar:
+5. Para probar los endpoints desde un navegador, en el equipo en donde se esta ejecutando el servidor uvicorn, consultar:
 
 http://127.0.0.1:8000/docs
