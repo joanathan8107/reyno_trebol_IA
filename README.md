@@ -1,7 +1,7 @@
 # reyno_trebol_IA
 ia test python
 
-Caso Práctico:
+# CASO PRACTICO
 
 En el Reino del Trébol, El Rey Mago requiere diseñar un sistema para la academia de magia; este debe realizar el registro de solicitud del estudiante y la asignación aleatoria de su Grimorio. El nivel de estos Grimorios está categorizado por el tipo de trébol en la portada:
 
@@ -30,7 +30,7 @@ Los estudiantes tendrán una de las siguientes afinidades de magia:
 ▪ Tierra
 
 
-Instrucciones:
+## INSTRUCCIONES
 
 Para este requerimiento se requiere exponer un API Rest, construida en Python.
 
@@ -65,9 +65,9 @@ Una vez aprobada la solicitud se debe realizar la auto asignación de Grimorio y
 Al incumplir cualquiera de estos criterios automáticamente la solicitud queda rechazada y no se debe asignar Grimorio.
 
 
-ESTRUCTURA DEL CÓDIGO
+## ESTRUCTURA DEL CÓDIGO
 
-database.py 
+### database.py 
 
 Contiene la estructura y datos de conexion a una base datos, para este caso MySQL, la cual puede modificarse, esto lo hace mediante el uso de la libreria ORM peewee.
 Este debe modificarse con los datos del repositorio de datos a utilizar:
@@ -77,12 +77,12 @@ Este debe modificarse con los datos del repositorio de datos a utilizar:
   host='localhost', port=3306
 
 
-schemas.py
+### schemas.py
 
 Contiene la estructura del modelo de datos que se utilizan para transporte de datos a traves de peticiones tipo Request.
 Implementa la libreria pydantic.
 
-main.py
+### main.py
 
 Mediante la libreria fastAPI, y el servidor uvicorn, este archivo contiene el código de las peticiones tipo Request, del ejercicio:
 
@@ -120,22 +120,33 @@ get('/solicitud/grimorios/')
 delete('/solicitud/{id}')
 
 
-
-requirements.txt
+### requirements.txt
 
 Este archivo contiene el listado de librerias necesarias para ejecutar el ejercicio.
 
 
+### test_main.http
+
+Archivo de prueba de endpoints.
 
 
+## EJECUCIÓN
 
+1. Descargar Código.
 
+2. Ejecutar pip -r requirements.txt para instalar las librerias necesarias del proyecto.
 
+3. Modificar el archivo database.py con los datos de conexión a la base de datos a trabajar:
+    database='reynoTrebolIA', 
+    user='root', password='password',
+    host='localhost', port=3306
 
+4. Ejecutar desde linea de comandos:
 
+uvicorn main:app
 
+Este comando ejecutara el servidor uvicorn en el cual se estara levantando el servicio.
 
+5. Para probar los endpoints, en el equipo en donde se esta ejecutando el servidor uvicorn, desde el navegador consultar:
 
-
-
-
+http://127.0.0.1:8000/docs
